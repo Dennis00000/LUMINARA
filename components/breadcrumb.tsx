@@ -16,11 +16,16 @@ interface BreadcrumbProps {
 
 export function Breadcrumb({ items, className }: BreadcrumbProps) {
   return (
-    <nav aria-label="Breadcrumb" className={cn("flex items-center space-x-1 text-sm text-gray-500", className)}>
+    <nav
+      aria-label="Breadcrumb"
+      className={cn("flex items-center space-x-1 text-sm text-gray-500", className)}
+    >
       <div className="flex items-center space-x-1 overflow-x-auto scrollbar-hide">
         {items.map((item, index) => (
           <div key={index} className="flex items-center space-x-1 flex-shrink-0">
-            {index === 0 && <Home className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />}
+            {index === 0 && (
+              <Home className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
+            )}
 
             {item.href ? (
               <Link
@@ -35,7 +40,9 @@ export function Breadcrumb({ items, className }: BreadcrumbProps) {
               </span>
             )}
 
-            {index < items.length - 1 && <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 text-gray-400 flex-shrink-0" />}
+            {index < items.length - 1 && (
+              <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 text-gray-400 flex-shrink-0" />
+            )}
           </div>
         ))}
       </div>

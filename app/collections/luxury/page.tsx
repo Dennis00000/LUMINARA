@@ -1,4 +1,5 @@
-import Breadcrumb from "@/components/ui/breadcrumb"
+import { Breadcrumb } from '@/components/ui/breadcrumb'
+
 
 const LuxuryCollectionPage = () => {
   return (
